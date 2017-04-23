@@ -2,11 +2,11 @@ require "net/http"
 require "uri"
 
 wpdir = "/srv/www/wordpress/current"
-dbname = node[:deploy][:wordpress][:database][:database]
-dbuser = node[:deploy][:wordpress][:database][:username]
-dbpass = node[:deploy][:wordpress][:database][:password]
-dbhost = node[:deploy][:wordpress][:database][:host]
-wp_admin_email = node[:deploy][:wordpress][:wp_admin_email]
+dbname = "wordpress" 
+dbuser = "onikut" 
+dbpass = "onikut" 
+dbhost = "or1r1ridoaszod3" 
+wp_admin_email = "takashi.onikura@gmail.com" 
 
 execute "wp configure" do
    command "wp core config --dbname=#{dbname} --dbuser=#{dbuser} --dbpass=#{dbpass} --dbhost=#{dbhost}"
